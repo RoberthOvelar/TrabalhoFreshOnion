@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="FreshOnionUnit" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.freshonion.entities.Obra</class>
+		<class>com.freshonion.entities.Filme</class>
+		<class>com.freshonion.entities.TopFreshFilme</class>
+		<class>com.freshonion.entities.TopFreshLivro</class>
+		<class>com.freshonion.entities.TopFreshSerie</class>
+		<class>com.freshonion.entities.Usuario</class>
+		<class>com.freshonion.entities.Serie</class>
+		<class>com.freshonion.entities.Livro</class>
+		<class>com.freshonion.entities.Critica</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/freshonion?useSSL=false&amp;serverTimezone=UTC" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+	
+			<property name="hibernate.dialect" 	value="org.hibernate.dialect.MySQL8Dialect" />
+			
+			
+		</properties>
+	</persistence-unit>
+</persistence>
